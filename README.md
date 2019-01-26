@@ -83,5 +83,3 @@ returns the total new accounts by month
 
 `analysis.freq` 
 returns the frequency of churn analysis used
-
-### What can I do with this?
