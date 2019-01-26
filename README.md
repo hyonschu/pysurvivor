@@ -1,2 +1,2 @@
 # pysurvivor
-Simple survivor/ retention analysis in pythin
+Simple survivor/ retention analysis in python
