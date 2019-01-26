@@ -4,8 +4,7 @@ import pandas as pd
 
 
 class pysurvivor(object):
-    '''
-        awefjkhaesjk hfajkseh ajkhl jkh
+    '''        awefjkhaesjk hfajkseh ajkhl jkh
     '''
     def __init__(self, dataframe, start_col, churn_col, freq='m'):
         self.lookup = {'W': '%Y-%W', 'm': '%Y-%m', 'Y': '%Y'}
@@ -23,7 +22,7 @@ class pysurvivor(object):
     #         how many people are left each month?
         self.survivors = (self.data.query('join!=churn').groupby(['join', 'churn']).count())[self.data.columns[0]]\
             .unstack().ffill(axis=1)
-        self.survivors_pct = self.survivors.divide(self.totals)
+        self.survivors_pct = self.survivors.divide(self.totals, axis=0)
     #         how many CUMULATIVE people CHURNED (have left) at each month?
         self.churn = (self.data.groupby(['join', 'churn']).count()[
                       self.data.columns[0]]).unstack()
