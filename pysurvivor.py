@@ -1,11 +1,7 @@
 # pysurvivor.py
 
 import pandas as pd
-
-
 class pysurvivor(object):
-    '''        awefjkhaesjk hfajkseh ajkhl jkh
-    '''
     def __init__(self, dataframe, start_col, churn_col, freq='m'):
         self.lookup = {'W': '%Y-%W', 'm': '%Y-%m', 'Y': '%Y'}
         self.data = dataframe
