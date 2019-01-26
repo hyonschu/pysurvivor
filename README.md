@@ -54,10 +54,10 @@ analysis = pysurvivor(
          start_col='joined',   # name of dataframe column with join/subscription start date
          churn_col='churned',  # name of df column with churn date      
          freq='m'              # strftime options ('Y' for %Y, 'm' for %Y-%m, 'W' for %Y-%W)
-         # in english, that's 
+         # in plain English, that's 
          # Y for Year, 
          # m for Year-month,
-         # W for Year-week
+         # W for Year-week (CasE/CapiTaLs mAtTer HerE!)
    )
 ```
 Creates a python object called `analysis`. 
