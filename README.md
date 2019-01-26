@@ -1,5 +1,5 @@
 # pysurvivor
-Simple survivor / retention analysis in python
+Simple survival / retention analysis in python
 
 Take a spreadsheet or a dataframe that has a bunch of join and churn dates and do a periodic survival analysis.
 
