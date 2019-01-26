@@ -1,6 +1,8 @@
 # pysurvivor
 Simple survivor / retention analysis in python
 
+TL;DR: You can take a spreadsheet or a dataframe that has a bunch of join and churn dates and do a periodic survival analysis
+
 ## How to use:
 ```
 from pysurvivor import pysurvivor
@@ -15,13 +17,29 @@ analysis = pysurvivor(
          # W for Year-week
    )
 ```
-Creates a python object called analysis.
+Creates a python object called `analysis`. 
 
-`analysis.survivors` generates a pandas.DataFrame that shows how many accounts remain active that up to that month
+This object contains the following:
 
-`analysis.survivors_pct` generates a pandas.DataFrame that shows how many accounts remain active that up to that month as a percentage
+`analysis.survivors` 
+generates a pandas.DataFrame that shows how many accounts remain active that up to that month
 
-`analysis.churn` generates a pandas.DataFrame that shows how many accounts churned that month
+`analysis.survivors_pct` 
+generates a pandas.DataFrame that shows how many accounts remain active that up to that month as a percentage
 
-`analysis.churn` generates a pandas.DataFrame that shows how many accounts churned that month as a percentages
+`analysis.churn` 
+generates a pandas.DataFrame that shows how many accounts churned that month
 
+`analysis.churn_pct` 
+generates a pandas.DataFrame that shows how many accounts churned that month as a percentages
+
+`analysis.data` 
+generates the transformed data
+
+`analysis.totals` 
+returns the total new accounts by month
+
+`analysis.freq` 
+returns the frequency of churn analysis used
+
+### What can I do with this?
