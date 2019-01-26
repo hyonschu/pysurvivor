@@ -34,9 +34,10 @@ JOINED	2016-06	2016-07	2016-08	2016-09	2016-10	2016-11	2016-12	2017-01
 And even this (with seaborn)
 ```
 import matplotlib.pyplot as plt
+import seaborn as sns
 plt.figure(figsize=(16,12))
-mask = asdf.survivors_pct.isnull()
-sns.heatmap(asdf.survivors_pct, mask=mask, cmap="Blues")
+mask = analysis.survivors_pct.isnull()
+sns.heatmap(analysis.survivors_pct, mask=mask, cmap="Blues")
 plt.title('Heatmap of Percentage of Customers Retained By Month', size=16)
 plt.xlabel('Churn Month')
 plt.ylabel('Joined Month')
